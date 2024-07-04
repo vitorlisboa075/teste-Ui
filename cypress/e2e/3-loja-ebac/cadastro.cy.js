@@ -22,7 +22,7 @@ describe('Funcionalidade castasdro', () => {
         
     });
 
-    it('Deve criar um novo log/cadastro- variaves com emil com nome igual', () => {
+    it('Deve criar um novo log/cadastro- variaves com emil com nome igualq', () => {
         var nome = faker.person.firstName()
         var sobrenome = faker.person.lastName()
         var email = faker.internet.email(nome+sobrenome)
