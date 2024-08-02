@@ -10,7 +10,13 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add('login', (login, senha) => { 
+
+    cy.get('#username').type(login)
+    cy.get('#password').type(senha)
+    cy.get('.woocommerce-form > .button').click()
+
+})
 //
 //
 // -- This is a child command --

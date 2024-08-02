@@ -1,9 +1,11 @@
 {
-  "name": "repositorio",
+  "name": "teste-Ui",
   "version": "1.0.0",
   "main": "index.js",
+  "descripton": "index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "test": "npx cypress run --browser chrome",
+   "cy:dash" : "npx cypress run --record --key 360fa56f-752b-4288-a059-5fbd6a4728a9"
   },
   "keywords": [],
   "author": "",

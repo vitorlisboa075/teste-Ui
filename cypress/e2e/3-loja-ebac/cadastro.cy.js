@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker';
 
 describe('Funcionalidade castasdro', () => {
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
+        cy.visit('minha-conta')
     });
     it('Deve criar um novo log/cadastro', () => {
         cy.get('#reg_email').type(faker.internet.email())

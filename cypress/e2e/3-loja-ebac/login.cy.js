@@ -1,9 +1,9 @@
 /// <reference types="cypress"/>
-
+const perfil = require('../../fixtures/login2.cy.json')
 describe('Funcionalidade de login',()=>{
 
     beforeEach(() => {
-        cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
+        cy.visit('minha-conta')
     });
     afterEach(() => {
         cy.screenshot()
@@ -30,8 +30,20 @@ describe('Funcionalidade de login',()=>{
         cy.get('.woocommerce-form > .button').click()
 
         cy.get('.woocommerce-error > li'). should('exist')
-        cy.get('.woocommerce-error > li'). should('contain','A senha fornecida para o e-mail vitor.g.lisbo@gmail.com está incorreta. Perdeu a senha?')
+        cy.get('.woocommerce-error > li'). should('contain','Endereço de e-mail desconhecido. Verifique novamente ou tente seu nome de usuário.')
 
+    });
+
+    it('dede fazer login com itens customizados ', () => {
+    
+        cy.login('vitor.g.lisbo2018@gmail.com','lisboa2018')
+
+    });
+
+    it('usanda massa de dados ', () => {
+        cy.get('#username').type(perfil.usuario)
+        cy.get('#password').type(perfil.senha)
+        cy.get('.woocommerce-form > .button').click()
     });
 
 })
